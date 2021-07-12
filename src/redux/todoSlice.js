@@ -28,9 +28,12 @@ export const todoSlice = createSlice({
       }
       state.push(newTodo)
     },
+    getTodos: (state) => {
+      return state
+    }
   }
 });
 
-export const { addTodo } = todoSlice.actions;
+export const { addTodo, getTodos } = todoSlice.actions;
 
 export default todoSlice.reducer;
