@@ -1,0 +1,8 @@
+.inputStyle {
+  display: flex;
+  align-items: baseline;
+}
+
+.inputStyle > p {
+  padding: 10px 20px;
+}
