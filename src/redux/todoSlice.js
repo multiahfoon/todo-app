@@ -10,7 +10,7 @@ export const todoSlice = createSlice({
     },
     {
       id: 2,
-      title: 'Todo 3',
+      title: 'Todo 2',
       completed: false
     },
     {
@@ -30,10 +30,13 @@ export const todoSlice = createSlice({
     },
     getTodos: (state) => {
       return state
+    },
+    deleteTodo: (state, action) => {
+      return state.filter(todo => todo.id !== action.payload.id)
     }
   }
 });
 
-export const { addTodo, getTodos } = todoSlice.actions;
+export const { addTodo, getTodos, deleteTodo } = todoSlice.actions;
 
 export default todoSlice.reducer;
