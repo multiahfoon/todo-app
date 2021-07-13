@@ -1,8 +1,12 @@
 .inputStyle {
   display: flex;
   align-items: baseline;
+  justify-content: center;
+  border-bottom: solid #4444448a 2px;
+  border-radius: 1.79px;
 }
 
 .inputStyle > p {
   padding: 10px 20px;
+  width: 80%;
 }

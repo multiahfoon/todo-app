@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../../redux/todoSlice'
 
+import './form.styles.css'
+
 function Form() {
   const [todo, setTodo] = useState('')
   const dispatch = useDispatch()
@@ -21,7 +23,7 @@ function Form() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} placeholder='Add todo' />
+        <input type="text" onChange={handleChange} placeholder='Add todo' required/>
         <button>Add</button>
       </form>
     </div>
