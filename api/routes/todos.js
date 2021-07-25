@@ -19,5 +19,12 @@ router.patch('/', (req, res) => {
   return res.send(todos)
 })
 
+router.delete('/', (req, res) => {
+  const { id } = req.body
+  const index = todos.findIndex(todo => todo.id === id)
+  index !== -1 ? todos.splice(index, 1) : null
+  return res.send(todos)
+})
+
 // export all routes that have been defined in this file
 module.exports = router
